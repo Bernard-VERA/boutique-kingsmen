@@ -433,6 +433,10 @@ nav ul {
     display: block;
   }
 
+  .hero-section {
+    min-height: 500px;
+  }
+
   .hero-content {
     padding: var(--spacing-md);
   }
@@ -477,10 +481,6 @@ nav ul {
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    min-height: fit-content;
-  }
-  
   .hero-buttons {
     flex-direction: column;
     align-items: center;
