@@ -477,6 +477,10 @@ nav ul {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    min-height: fit-content;
+  }
+  
   .hero-buttons {
     flex-direction: column;
     align-items: center;
