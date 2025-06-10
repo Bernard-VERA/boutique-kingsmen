@@ -248,6 +248,11 @@ nav ul {
   padding: 0 10px;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero-slogan {
   font-size: clamp(1.5rem, 4vw, 2.5rem); /* Taille responsive qui s'adapte à la largeur de l'écran */
   margin-bottom: var(--spacing-md);
@@ -496,3 +501,4 @@ nav ul {
     font-size: 1.4rem;
   }
 }
+
