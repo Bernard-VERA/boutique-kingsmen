@@ -22,21 +22,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+            // Vérifier que targetId n'est pas simplement "#"
+            if (targetId !== "#") {
+                const targetElement = document.querySelector(targetId);
 
-                history.pushState(null, null, targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    history.pushState(null, null, targetId);
+                }
             }
         });
     });
+
+    const globalCarouselControl = document.getElementById('global-carousel-control');
+    const allCarousels = document.querySelectorAll('.carousel');
+    let carouselsArePaused = false;
+
+    if (globalCarouselControl) {
+        globalCarouselControl.addEventListener('click', function() {
+            const controlText = this.querySelector('.control-text');
+            const controlIcon = this.querySelector('.control-icon');
+            
+            if (carouselsArePaused) {
+            // Reprendre le défilement
+                allCarousels.forEach(carousel => {
+                carousel.classList.remove('carousel-paused');
+                });
+                
+                controlText.textContent = 'Arrêter le défilement';
+                controlIcon.textContent = '⏸';
+                carouselsArePaused = false;
+            } else {
+                // Arrêter le défilement
+                allCarousels.forEach(carousel => {
+                carousel.classList.add('carousel-paused');
+                });
+                
+                controlText.textContent = 'Reprendre le défilement';
+                controlIcon.textContent = '▶';
+                    carouselsArePaused = true;
+            }
+        });
+    }
 })
