@@ -29,8 +29,8 @@ body, header, main, footer, section {
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body, html {
@@ -571,14 +571,11 @@ nav a.active {
 
 .carousel-container {
   position: relative;
-  width: 100vw;
+  width: calc(99vw - var(--scrollbar-width));
   left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  transform: translateX(-50%);
+  margin: 2rem auto 0;
   overflow: hidden;
-  margin-top: 2rem;
-  margin-bottom: 0;
   padding: 1rem 0;
   z-index: 1;
 }

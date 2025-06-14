@@ -75,3 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 })
+
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
+document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`);
