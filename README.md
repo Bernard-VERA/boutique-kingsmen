@@ -22,6 +22,7 @@ Montrer au visiteur le sérieux et l'expérience du personnel de la boutique, ai
 - Choix d'un thème, de couleurs et de polices, mise en place de rubriques adaptées.
 - Utilisation de Javascript pour rendre le site dynamique.
 - Adaptation du site aux différents écrans : Ordinateur, tablette et mobile.
+- Mise en place d'une carte interactive de localisation de la boutique
 
 Ce site me permettra d'améliorer mes compétences en Front-end, notament pour la partie UX/UI Design.
 
