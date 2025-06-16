@@ -1047,5 +1047,11 @@ h2.accent-title {
   .hero-slogan {
     font-size: 1.4rem;
   }
+
+  .map-overlay-message {
+    padding: 5px 8px;
+    margin: 10px;
+    text-align: center;
+  }
 }
 

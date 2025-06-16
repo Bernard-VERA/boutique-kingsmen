@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       
       // Ajouter la popup avec les options personnalisées
-      marker.bindPopup('<div class="popup-content"><b>Kingsmen</b><br>1 La Canebière, 13001 Marseille</div>', popupOptions).openPopup();
+      marker.bindPopup('<div class="popup-content"><b>Boutique Kingsmen</b><br>1 La Canebière, 13001 Marseille</div>', popupOptions).openPopup();
       
       // S'assurer que la carte est correctement dimensionnée
       map.invalidateSize();
