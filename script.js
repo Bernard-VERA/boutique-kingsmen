@@ -73,7 +73,86 @@ document.addEventListener('DOMContentLoaded', function() {
                     carouselsArePaused = true;
             }
         });
-    }
+    };
+
+      // Initialisation de la carte OpenStreetMap
+  window.addEventListener('load', function() {
+    // Vérifier si l'élément de carte existe
+    const mapElement = document.getElementById('openstreetmap');
+    if (!mapElement) return;
+    
+    // Coordonnées du 1 la canebière
+    const shopLat = 43.29561;
+    const shopLng = 5.37454;
+    
+    // Forcer un délai pour s'assurer que le conteneur de la carte est bien rendu
+    setTimeout(function() {
+      // Vérifier si la carte existe déjà
+      if (window.myMap) {
+        window.myMap.remove();
+      }
+      
+      // Initialiser la carte avec scrollWheelZoom désactivé par défaut
+      const map = L.map('openstreetmap', {
+        scrollWheelZoom: false, // Désactive le zoom par défaut avec la molette
+        center: [shopLat, shopLng],
+        zoom: 16,
+        attributionControl: true
+      });
+      
+      // Stocker la référence de la carte dans une variable globale
+      window.myMap = map;
+      
+      // Activer le scrollWheelZoom uniquement lorsque la carte a le focus
+      map.on('focus', function() {
+        map.scrollWheelZoom.enable();
+      });
+      
+      // Désactiver le scrollWheelZoom lorsque la carte perd le focus
+      map.on('blur', function() {
+        map.scrollWheelZoom.disable();
+      });
+      
+      // Ajouter la couche OpenStreetMap
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+      }).addTo(map);
+      
+      // Ajouter un marqueur pour la boutique
+      const marker = L.marker([shopLat, shopLng]).addTo(map);
+      
+      // Créer une popup avec des options personnalisées pour l'accessibilité
+      const popupOptions = {
+        closeButton: true,
+        closeOnClick: false,
+        className: 'accessible-popup',
+        maxWidth: 300,
+        minWidth: 200,
+        autoPan: true,
+        offset: [0, -5] // Ajuster le décalage pour centrer la popup
+      };
+      
+      // Ajouter la popup avec les options personnalisées
+      marker.bindPopup('<div class="popup-content"><b>Kingsmen</b><br>1 La Canebière, 13001 Marseille</div>', popupOptions).openPopup();
+      
+      // S'assurer que la carte est correctement dimensionnée
+      map.invalidateSize();
+      
+      // Remplacer le lien par un bouton pour éviter les liens morts
+      setTimeout(function() {
+        const closeButtons = document.querySelectorAll('.leaflet-popup-close-button');
+        closeButtons.forEach(function(closeButton) {
+          // Remplacer l'attribut href par javascript:void(0)
+          closeButton.setAttribute('href', 'javascript:void(0);');
+          closeButton.setAttribute('role', 'button');
+          closeButton.setAttribute('aria-label', 'Fermer la carte');
+          
+          
+        });
+      }, 300); // Délai plus long pour s'assurer que la popup est rendue
+    }, 500); // Délai pour s'assurer que le conteneur est bien rendu
+  });
 })
 
 function getScrollbarWidth() {
