@@ -918,31 +918,31 @@ h2.accent-title {
 }
 
 .leaflet-popup-close-button {
-  color: var(--c-accent) !important;
+  color: var(--c-accent)!important;
   font-size: 20px !important;
   font-weight: bold !important;
-  opacity: 1 !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  border: none !important;
-  background: transparent !important;
+  opacity: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }
             
-/* Effet de survol plus visible */
+/* Effet d'accentuation au survol */
 .leaflet-popup-close-button:hover {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  border-radius: 3px !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 11px;
 }
 
-/* Améliorer la visibilité du contenu de la popup */
+/* Améliorer la visibilité du texte de la popup */
 .leaflet-popup-content {
   font-size: 14px !important;
   line-height: 1.5 !important;
   font-weight: 500 !important;
 }
 
-/* Rendre le titre plus visible */
+/* Rendre le titre plus visible - b dans le script.js */
 .leaflet-popup-content b {
   font-size: 16px !important;
   color: var(--c-accent) !important;
