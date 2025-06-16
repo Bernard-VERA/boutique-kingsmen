@@ -1,3 +1,8 @@
+function showDemoAlert() {
+    alert('Ce site est une démonstration! La boutique Kingsmen n\'existe pas. Merci de votre visite');
+    return false;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
    
     const menuButton = document.getElementById('menu-button');
@@ -153,10 +158,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300); // Délai plus long pour s'assurer que la popup est rendue
     }, 500); // Délai pour s'assurer que le conteneur est bien rendu
   });
-})
+});
 
+// Gestion du bouton "Voir toutes nos collections"
+  const collectionsButton = document.querySelector('.collection-footer .btn-primary');
+  if (collectionsButton) {
+    collectionsButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      showDemoAlert();
+    });}
+
+// Gestion de la taille de la Scrollbar pour le diaporama
 function getScrollbarWidth() {
   return window.innerWidth - document.documentElement.clientWidth;
 }
-
 document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`);
