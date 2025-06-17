@@ -166,7 +166,17 @@ document.addEventListener('DOMContentLoaded', function() {
     collectionsButton.addEventListener('click', function(e) {
       e.preventDefault();
       showDemoAlert();
-    });}
+    });
+  }
+
+  // Gestion du formulaire de contact
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      showDemoAlert();
+    });
+  }
 
 // Gestion de la taille de la Scrollbar pour éviter dépassement horizontal du diaporama
 function getScrollbarWidth() {
