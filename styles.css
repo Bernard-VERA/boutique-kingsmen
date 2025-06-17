@@ -1204,6 +1204,14 @@ h2.accent-title {
     font-size: 1.4rem;
   }
 
+  .story-map iframe {
+    height: 300px;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+
   .map-overlay-message {
     padding: 5px 8px;
     margin: 10px;
@@ -1239,6 +1247,10 @@ h2.accent-title {
 }
 
 @media (max-width: 450px) {
+  .map-overlay-message {
+    font-size: 0.8em;
+  }
+  
   .horaires, .coordonnees {
     font-size: 0.8em;
   }
