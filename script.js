@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
       showDemoAlert();
     });}
 
-// Gestion de la taille de la Scrollbar pour le diaporama
+// Gestion de la taille de la Scrollbar pour éviter dépassement horizontal du diaporama
 function getScrollbarWidth() {
   return window.innerWidth - document.documentElement.clientWidth;
 }
