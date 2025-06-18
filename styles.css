@@ -1096,13 +1096,13 @@ h2.accent-title {
 
 /*FOOTER*/
 footer {
-  width: 100%;
   padding:  10px 20px;
 }
 
 .footer-text p {
   margin: 5px auto 5px;
   text-align: center;
+  font-size: 0.8em;
 }
 
 
