@@ -24,5 +24,14 @@ Montrer au visiteur le sérieux et l'expérience du personnel de la boutique, ai
 - Adaptation du site aux différents écrans : Ordinateur, tablette et mobile.
 - Mise en place d'une carte interactive de localisation de la boutique
 
-Ce site me permettra d'améliorer mes compétences en Front-end, notament pour la partie UX/UI Design.
+La création de ce site m'a permis d'améliorer mes compétences en Front-end, notament pour la partie UX/UI Design.  
+<br/>
+Vous pouvez voir le projet en cliquant ici : <a href="https://bernard-vera.github.io/boutique-kingsmen/" target="_blank">Boutique Kingsmen</a>  
+
+-----
+
+<p align="center" width="100%">
+    <img width="90%" src="https://github.com/Bernard-VERA/Portfolio/blob/main/media/kingsmen.jpg"> 
+</p>
+
 
