@@ -31,7 +31,7 @@ Vous pouvez voir le projet en cliquant ici : <a href="https://bernard-vera.githu
 -----
 
 <p align="center" width="100%">
-    <img width="90%" src="https://github.com/Bernard-VERA/Portfolio/blob/main/media/kingsmen.jpg"> 
+    <img width="90%" src="https://github.com/Bernard-VERA/boutique-kingsmen/blob/main/media/kingsmen.jpg"> 
 </p>
 
 
